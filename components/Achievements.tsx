@@ -98,26 +98,25 @@ export default function Achievements() {
   }, [])
 
   return (
-  <div id='achievements' ref={containerRef} className="min-h-screen md:min-h-[90vh] py-10 md:py-12 flex flex-col items-center scroll-mt-24 md:scroll-mt-32">
+    <div id='achievements' ref={containerRef} className="min-h-screen md:min-h-[90vh] py-10 md:py-12 flex flex-col items-center scroll-mt-24 md:scroll-mt-32">
       <div className="flex flex-row flex-wrap justify-center items-center gap-4 md:gap-6 p-3 md:mb-2">
-        <svg width="50" height="50" className='navbar' viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clipPath="url(#clip0_231_793)"> <path fillRule="evenodd" clipRule="evenodd" d="M50 0H200V50V150L150 200L150 50H0L50 0ZM0 165.067V100L65.067 100L0 165.067ZM100 200H35.7777L100 135.778L100 200Z" fill="url(#paint0_linear_231_793)"/> </g> <defs> <linearGradient id="paint0_linear_231_793" x1="177" y1="-9.23648e-06" x2="39.5" y2="152.5" gradientUnits="userSpaceOnUse"> <stop stopColor="#B0B9FF"/> <stop offset="1" stopColor="#E7E9FF"/> </linearGradient> <clipPath id="clip0_231_793"> <rect width="200" height="200" fill="white"/> </clipPath> </defs> </svg>
+
         <h1 ref={titleRef} className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-wide text-[#F2F2F2]">
           Achievements
         </h1>
-        <svg width="50" height="50" className='navbar' viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clipPath="url(#clip0_231_793)"><path fillRule="evenodd" clipRule="evenodd" d="M50 0H200V50V150L150 200L150 50H0L50 0ZM0 165.067V100L65.067 100L0 165.067ZM100 200H35.7777L100 135.778L100 200Z" fill="url(#paint0_linear_231_793)"/></g><defs><linearGradient id="paint0_linear_231_793" x1="177" y1="-9.23648e-06" x2="39.5" y2="152.5" gradientUnits="userSpaceOnUse"><stop stopColor="#B0B9FF"/><stop offset="1" stopColor="#E7E9FF"/></linearGradient><clipPath id="clip0_231_793"><rect width="200" height="200" fill="white"/></clipPath></defs></svg>
       </div>
 
       {/* Image + Achievements */}
       <div className="flex flex-col md:flex-row flex-wrap justify-center items-start gap-10 p-5 w-full max-w-6xl mt-6 md:mt-10">
-    <div className="flex-1 flex justify-center md:justify-start">
+        <div className="flex-1 flex justify-center md:justify-start">
           <Image
             ref={imageRef}
             src="/img.jpeg"
             alt="Abstract network illustration"
             width={400}
             height={500}
-      className="rounded-lg shadow-lg border border-white/10"
-      onLoad={() => ScrollTrigger.refresh()}
+            className="rounded-lg shadow-lg border border-white/10"
+            onLoad={() => ScrollTrigger.refresh()}
           />
         </div>
 

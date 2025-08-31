@@ -35,7 +35,7 @@ export default function Navbar() {
           onClick={() => setResumeOpen(true)}
           className="bg-[#D4D4D4] text-[#0D0D0D] rounded-full hover:bg-[#E5E5E5] cursor-pointer transition-all duration-300 px-4 py-2 min-w-[140px]"
         >
-          Show Resume
+          Resume
         </button>
 
         {/* Menu Button */}
@@ -62,7 +62,7 @@ export default function Navbar() {
         }`}
       >
         <div className="p-6 flex flex-col gap-6 items-center">
-          <h2 className="text-xl font-bold">H Aditya Kumar</h2>
+          <h2 className="text-xl font-bold">MENU</h2>
           <nav className="flex flex-col gap-6 items-center w-full">
             <a href="#home" onClick={handleLinkClick} className="menu-link">
               <span>Home</span>

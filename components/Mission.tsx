@@ -3,6 +3,13 @@
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/all'
+import { Roboto_Flex } from 'next/font/google'
+
+const robotoFlexLocal = Roboto_Flex({
+  subsets: ['latin'],
+  weight: ['100', '400', '500', '600', '700', '800'],
+  display: 'swap',
+})
 
 export default function Mission() {
   useGSAP(() => {
@@ -16,13 +23,13 @@ export default function Mission() {
       onEnter: () => {
         gsap.to(document.body, { backgroundColor: '#0D0D0D', duration: 0.3 })
         gsap.to(hrElements, { backgroundColor: '#F2F2F2', duration: 0.3 })
-        gsap.to('body h1:not(.navbar *), body h2:not(.navbar *), body h3:not(.navbar *), body p:not(.navbar *), body div:not(.navbar *), body a:not(.navbar *), body span:not(.navbar *), body li:not(.navbar *), body svg path:not(.navbar *)', 
+  gsap.to('body h1:not(.navbar *):not(#skills *), body h2:not(.navbar *):not(#skills *), body h3:not(.navbar *):not(#skills *), body p:not(.navbar *):not(#skills *), body div:not(.navbar *):not(#skills):not(#skills *), body a:not(.navbar *):not(#skills *), body span:not(.navbar *):not(#skills *), body li:not(.navbar *):not(#skills *), body svg path:not(.navbar *):not(#skills *)', 
           { color: '#F2F2F2', fill: '#F2F2F2', duration: 0.3 })
       },
       onLeave: () => {
         gsap.to(document.body, { backgroundColor: '#F2F2F2', duration: 0.3 })
         gsap.to(hrElements, { backgroundColor: '#0D0D0D', duration: 0.3 })
-        gsap.to('body h1:not(.navbar *), body h2:not(.navbar *), body h3:not(.navbar *), body p:not(.navbar *), body div:not(.navbar *), body a:not(.navbar *), body span:not(.navbar *), body li:not(.navbar *), body svg path:not(.navbar *)', 
+  gsap.to('body h1:not(.navbar *):not(#skills *), body h2:not(.navbar *):not(#skills *), body h3:not(.navbar *):not(#skills *), body p:not(.navbar *):not(#skills *), body div:not(.navbar *):not(#skills):not(#skills *), body a:not(.navbar *):not(#skills *), body span:not(.navbar *):not(#skills *), body li:not(.navbar *):not(#skills *), body svg path:not(.navbar *):not(#skills *)', 
           { color: '#0D0D0D', fill: '#0D0D0D', duration: 0.3 })
         gsap.to('#contact-section *', { color: '#F2F2F2', fill: '#F2F2F2', duration: 0.3 })
         gsap.to('.button', { color: '#0D0D0D', fill: '#F2F2F2', duration: 0.3 })
@@ -31,13 +38,13 @@ export default function Mission() {
       onEnterBack: () => {
         gsap.to(document.body, { backgroundColor: '#0D0D0D', duration: 0.3 })
         gsap.to(hrElements, { backgroundColor: '#F2F2F2', duration: 0.3 })
-        gsap.to('body h1:not(.navbar *), body h2:not(.navbar *), body h3:not(.navbar *), body p:not(.navbar *), body div:not(.navbar *), body a:not(.navbar *), body span:not(.navbar *), body li:not(.navbar *), body svg path:not(.navbar *)', 
+  gsap.to('body h1:not(.navbar *):not(#skills *), body h2:not(.navbar *):not(#skills *), body h3:not(.navbar *):not(#skills *), body p:not(.navbar *):not(#skills *), body div:not(.navbar *):not(#skills):not(#skills *), body a:not(.navbar *):not(#skills *), body span:not(.navbar *):not(#skills *), body li:not(.navbar *):not(#skills *), body svg path:not(.navbar *):not(#skills *)', 
           { color: '#F2F2F2', fill: '#F2F2F2', duration: 0.3 })
       },
       onLeaveBack: () => {
         gsap.to(document.body, { backgroundColor: '#F2F2F2', duration: 0.3 })
         gsap.to(hrElements, { backgroundColor: '#0D0D0D', duration: 0.3 })
-        gsap.to('body h1:not(.navbar *), body h2:not(.navbar *), body h3:not(.navbar *), body p:not(.navbar *), body div:not(.navbar *), body a:not(.navbar *), body span:not(.navbar *), body li:not(.navbar *), body svg path:not(.navbar *)', 
+  gsap.to('body h1:not(.navbar *):not(#skills *), body h2:not(.navbar *):not(#skills *), body h3:not(.navbar *):not(#skills *), body p:not(.navbar *):not(#skills *), body div:not(.navbar *):not(#skills):not(#skills *), body a:not(.navbar *):not(#skills *), body span:not(.navbar *):not(#skills *), body li:not(.navbar *):not(#skills *), body svg path:not(.navbar *):not(#skills *)', 
           { color: '#0D0D0D', fill: '#0D0D0D', duration: 0.3 })
       }
     })
@@ -48,11 +55,14 @@ export default function Mission() {
       id="mission"
       className="min-h-screen md:h-screen py-8 md:py-0 flex items-center justify-center p-3"
     >
-      <div className="max-w-4xl w-full flex items-center gap-12">
-        {/* Text Content */}
-        <div className="flex-1">
-          <h1 className="text-3xl md:text-4xl font-bold leading-tight tracking-wide">
-            HI, I’M ADITYA — A FULL-STACK DEVELOPER AND AI ENTHUSIAST FROM IIT BHUBANESWAR. WITH HANDS-ON EXPERIENCE IN BUILDING SCALABLE WEB APPS, ML-DRIVEN PLATFORMS, AND AI-POWERED TOOLS, I THRIVE ON TRANSFORMING INNOVATIVE IDEAS INTO REAL-WORLD SOLUTIONS. I’VE INTERNED AT CDAC WHERE I WORKED ON CRIME ANALYTICS AND AI INTEGRATION, AND I LOVE CREATING PROJECTS THAT BLEND FUNCTIONALITY WITH CREATIVITY.
+      <div className="max-w-6xl w-full flex items-center gap-12">
+  {/* Text Content */}
+  <div className={`flex-1 ${robotoFlexLocal.className}`}>
+          <h1
+            className="text-3xl md:text-[2.75rem] md:line-height font-thin leading-tight tracking-wide"
+            style={{ textAlign: 'justify' }}
+          >
+            Hi, I'm Aditya — A Full-Stack Developer And AI Enthusiast From IIT Bhubaneswar. With Hands-On Experience In Building Scalable Web Apps, ML-Driven Platforms, And AI-Powered Tools, I Thrive On Transforming Innovative Ideas Into Real-World Solutions. I’ve Interned At CDAC Where I Worked On Crime Analytics And AI Integration, And I Love Creating Projects That Blend Functionality With Creativity.
           </h1>
 
           {/* Horizontal line */}

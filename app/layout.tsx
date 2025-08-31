@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Oswald  } from "next/font/google";
+import { Geist, Oswald, Roboto_Flex  } from "next/font/google";
 import "./globals.css";
 import ClientWrapper from './client-wrapper'
 import { Toaster } from "@/components/ui/sonner"
 import SmoothScroll from '@/lib/lenis'
+import CustomCursor from "@/components/CustomCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,6 +18,12 @@ const oswald = Oswald({
   display: "swap",
 });
 
+const robotoFlex = Roboto_Flex({
+    weight: ['100', '400', '500', '600', '700', '800'],
+    style: 'normal',
+    subsets: ['latin'],
+    variable: '--font-roboto-flex',
+});
 
 
 
@@ -117,12 +124,13 @@ export default function RootLayout({
       </script>
     </head>
       <body
-        className={`${geistSans.variable} ${oswald.variable} ${oswald.className} bg antialiased`}
+        className={`${geistSans.variable} ${oswald.variable} ${oswald.className} ${robotoFlex.variable} bg antialiased`}
       >
   <SmoothScroll />
         <ClientWrapper>
         {children}
         <Toaster />
+        <CustomCursor />
         </ClientWrapper>
       </body>
     </html>
