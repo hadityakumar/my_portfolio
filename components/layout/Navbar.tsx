@@ -26,6 +26,14 @@ export default function Navbar() {
     })();
   }, []);
 
+  useEffect(() => {
+    if (resumeOpen) {
+      document.body.classList.add('cursor-auto')
+    } else {
+      document.body.classList.remove('cursor-auto')
+    }
+  }, [resumeOpen])
+
   return (
   <div className="navbar absolute top-0 left-0 w-full z-50">
       {/* Top Bar */}
@@ -33,17 +41,21 @@ export default function Navbar() {
         {/* Show Resume Button */}
         <button
           onClick={() => setResumeOpen(true)}
-          className="bg-[#D4D4D4] text-[#0D0D0D] rounded-full hover:bg-[#E5E5E5] cursor-pointer transition-all duration-300 px-4 py-2 min-w-[140px]"
+          className="up-effect border border-white rounded-full bg-white text-black px-6 text-sm h-10 min-w-[140px] cursor-pointer"
         >
-          Resume
+          <span className="initial-signtext text-black">Resume</span>
+          <span className="hover-signtext text-black">Resume</span>
         </button>
 
         {/* Menu Button */}
         <button
           onClick={() => setOpen(true)}
-          className="bg-[#0D0D0D] text-[#F2F2F2] rounded-full cursor-pointer hover:bg-black transition-all duration-300 p-2 w-[100px]"
+          className="w-fit text-nowrap group hover-effect hover:shadow-lg relative overflow-hidden border border-black rounded-full p-2 px-5 text-sm text-black bg-black transition-all duration-500 cursor-pointer"
         >
-          Menu
+          <span className="relative z-10 transition-all duration-500">
+            <span className="initial-text text-white">Menu</span>
+            <span className="absolute inset-0 flex items-center justify-center hover-text text-black opacity-0">Menu</span>
+          </span>
         </button>
       </div>
 
@@ -95,7 +107,7 @@ export default function Navbar() {
       </div>
 
       {/* Resume Modal */}
-      <Modal open={resumeOpen} onClose={() => setResumeOpen(false)}>
+  <Modal open={resumeOpen} onClose={() => setResumeOpen(false)}>
         <ResumeViewer fileUrl="/Aug_resume.pdf" />
       </Modal>
 
