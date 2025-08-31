@@ -14,12 +14,12 @@ export default function Skills() {
     'Node.js',
     'Flask',
     'Tailwind CSS',
-    'Framer Motion',
+    'JavaScript',
     'TensorFlow',
     'OpenCV',
     'Python',
     'C++',
-    'JavaScript',
+    'TypeScript',
     'MongoDB',
     'PostgreSQL',
     'Docker',
@@ -78,9 +78,13 @@ export default function Skills() {
           {Stack.map((skill, i) => (
             <div
               key={i}
-              className="skill-card aspect-square rounded-lg bg-black text-white border border-black/20 shadow-sm shadow-black/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex items-center justify-center text-sm sm:text-base md:text-lg lg:text-3xl text-center p-2 sm:p-3 md:p-4"
+              className="group relative aspect-square rounded-xl p-[1px] bg-gradient-to-br from-white/10 to-white/0 hover:from-white/20 hover:to-white/5 transition-all duration-300"
             >
-              {skill}
+              <div
+                className="skill-card relative h-full w-full rounded-[inherit] bg-black text-white shadow-sm shadow-black/10 flex items-center justify-center text-sm sm:text-base md:text-lg lg:text-3xl text-center p-2 sm:p-3 md:p-4 overflow-hidden transition-all duration-300 will-change-transform group-hover:-translate-y-0.5 group-hover:shadow-[0_8px_30px_rgba(255,255,255,0.12)] group-hover:scale-[1.02] after:content-[''] after:absolute after:inset-0 after:bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.08),transparent)] after:translate-x-[-100%] group-hover:after:translate-x-[100%] after:transition-transform after:duration-700"
+              >
+                {skill}
+              </div>
             </div>
           ))}
         </div>
