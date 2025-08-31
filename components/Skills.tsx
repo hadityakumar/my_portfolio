@@ -19,7 +19,7 @@ export default function Skills() {
     'OpenCV',
     'Python',
     'C++',
-    'JavaScript/TypeScript',
+    'JavaScript',
     'MongoDB',
     'PostgreSQL',
     'Docker',
@@ -65,7 +65,7 @@ export default function Skills() {
         {/* Title */}
         <div className="flex flex-row items-center justify-center gap-6 my-10">
 
-          <h1 className="text-2xl md:text-3xl font-extrabold uppercase tracking-wide">
+          <h1 className="text-2xl md:text-6xl font-extrabold uppercase tracking-wide">
             SKILLS
           </h1>
         </div>
@@ -73,12 +73,12 @@ export default function Skills() {
         {/* Skills grid */}
         <div
           ref={gridRef}
-          className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 lg:gap-4"
+          className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-3 lg:gap-1"
         >
           {Stack.map((skill, i) => (
             <div
               key={i}
-              className="skill-card aspect-square rounded-lg bg-black text-white border border-black/20 shadow-sm shadow-black/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex items-center justify-center text-sm sm:text-base md:text-lg lg:text-xl text-center p-2 sm:p-3 md:p-4"
+              className="skill-card aspect-square rounded-lg bg-black text-white border border-black/20 shadow-sm shadow-black/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex items-center justify-center text-sm sm:text-base md:text-lg lg:text-3xl text-center p-2 sm:p-3 md:p-4"
             >
               {skill}
             </div>

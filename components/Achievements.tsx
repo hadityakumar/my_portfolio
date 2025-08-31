@@ -101,7 +101,7 @@ export default function Achievements() {
     <div id='achievements' ref={containerRef} className="min-h-screen md:min-h-[90vh] py-10 md:py-12 flex flex-col items-center scroll-mt-24 md:scroll-mt-32">
       <div className="flex flex-row flex-wrap justify-center items-center gap-4 md:gap-6 p-3 md:mb-2">
 
-        <h1 ref={titleRef} className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-wide text-[#F2F2F2]">
+        <h1 ref={titleRef} className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-wide text-[#F2F2F2]">
           Achievements
         </h1>
       </div>
