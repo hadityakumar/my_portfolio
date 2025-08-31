@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   creator: "H Aditya Kumar",
   openGraph: {
     title: "H Aditya Kumar | Software Developer",
-    description: "Portfolio of H Aditya Kumar, a self-taught full-stack developer from Sudan, showcasing Next.js and React projects.",
+    description: "Hi, this is my portfolio",
     url: "https://shaheen-amjed.vercel.app",
     siteName: "H Aditya Kumar Portfolio",
     images: [
