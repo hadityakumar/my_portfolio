@@ -71,7 +71,7 @@ useGSAP(() => {
         <div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 place-items-start'>
           <div><h1 className='lg:text-8xl md:text-7xl sm:text-5xl text-3xl'></h1></div>
           <div className='navbar'>
-            <h2 className="text-balance des-service navbar font-medium text-3xl text-[#aaa7a7]">
+            <h2 className="text-balance des-service navbar font-medium text-base sm:text-3xl text-[#aaa7a7] ml-10 sm:ml-0">
               01 — DEVELOPED PRODUCTION-LEVEL TRADING STRATEGIES USING BRAIN’S SIMULATION PLATFORM
             </h2>
             <hr className="w-[400px] border-0 h-[1px] my-2 bg-[#A29E9A]" />
@@ -80,7 +80,7 @@ useGSAP(() => {
         <div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 place-items-start'>
           <div><h1 className='lg:text-8xl md:text-7xl sm:text-5xl text-3xl'></h1></div>
           <div className='navbar'>
-            <h2 className="text-balance des-service navbar font-medium text-3xl text-[#aaa7a7]">
+            <h2 className="text-balance des-service navbar font-medium text-base sm:text-3xl text-[#aaa7a7] ml-10 sm:ml-0">
               02 — APPLIED ADVANCED QUANTITATIVE TECHNIQUES & DATA ANALYSIS ON MARKET DATA
             </h2>
             <hr className="w-[400px] border-0 h-[1px] my-2 bg-[#A29E9A]" />
@@ -89,7 +89,7 @@ useGSAP(() => {
         <div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 place-items-start'>
           <div><h1 className='lg:text-8xl md:text-7xl sm:text-5xl text-3xl'></h1></div>
           <div className='navbar'>
-            <h2 className="text-balance des-service navbar font-medium text-3xl text-[#aaa7a7]">
+            <h2 className="text-balance des-service navbar font-medium text-base sm:text-3xl text-[#aaa7a7] ml-10 sm:ml-0">
               03 — CREATED 30+ STRATEGIES FOR OUT-OF-SAMPLE TESTING
             </h2>
             <hr className="w-[400px] border-0 h-[1px] my-2 bg-[#A29E9A]" />

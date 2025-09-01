@@ -68,7 +68,7 @@ export default function WebDev() {
         <div className='grid lg:grid-cols-2 navbar md:grid-cols-2 sm:grid-cols-1 place-items-start'>
           <div><h1 className='lg:text-8xl md:text-7xl navbar sm:text-5xl text-3xl'></h1></div>
           <div className='navbar'>
-            <h2 className="text-balance dev-service navbar font-medium text-3xl text-[#aaa7a7]">
+            <h2 className="text-balance dev-service navbar font-medium text-base sm:text-3xl text-[#aaa7a7] ml-10 sm:ml-0">
               01 — PROGRAMMING FUNDAMENTALS
             </h2>
             <hr className="w-[400px] border-0 h-[1px] navbar my-2 bg-[#A29E9A]" />
@@ -77,7 +77,7 @@ export default function WebDev() {
         <div className='grid lg:grid-cols-2 md:grid-cols-2 navbar sm:grid-cols-1 place-items-start'>
           <div><h1 className='lg:text-8xl md:text-7xl sm:text-5xl navbar text-3xl'></h1></div>
           <div className='navbar'>
-            <h2 className="text-balance dev-service navbar font-medium text-3xl text-[#aaa7a7]">
+            <h2 className="text-balance dev-service navbar font-medium text-base sm:text-3xl text-[#aaa7a7] ml-10 sm:ml-0">
               02 — DATA STRUCTURES & ALGORITHMS
             </h2>
             <hr className="w-[400px] border-0 h-[1px] navbar my-2 bg-[#A29E9A]" />
@@ -86,7 +86,7 @@ export default function WebDev() {
         <div className='grid lg:grid-cols-2 md:grid-cols-2 navbar sm:grid-cols-1 place-items-start'>
           <div></div>
           <div className='navbar'>
-            <h2 className="text-balance dev-service navbar font-medium text-3xl text-[#aaa7a7]">
+            <h2 className="text-balance dev-service navbar font-medium text-base sm:text-3xl text-[#aaa7a7] ml-10 sm:ml-0">
               03 — AI/ML AND DEEP LEARNING
             </h2>
             <hr className="w-[400px] border-0 h-[1px] navbar my-2 bg-[#A29E9A]" />

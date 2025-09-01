@@ -57,20 +57,20 @@ export default function Mission() {
     >
       <div className="max-w-6xl w-full flex items-center gap-12">
   {/* Text Content */}
-  <div className={`flex-1 ${robotoFlexLocal.className}`}>
+  <div className={`flex-1 px-4 sm:px-0 ${robotoFlexLocal.className}`}>
           <h1
-            className="text-3xl md:text-[2.75rem] md:line-height font-thin leading-tight tracking-wide"
+            className="text-base xs:text-lg sm:text-xl md:text-[2.75rem] md:line-height font-thin leading-relaxed sm:leading-tight tracking-wide"
             style={{ textAlign: 'justify' }}
           >
             Hi, I'm Aditya — A Full-Stack Developer And AI Enthusiast From IIT Bhubaneswar. With Hands-On Experience In Building Scalable Web Apps, ML-Driven Platforms, And AI-Powered Tools, I Thrive On Transforming Innovative Ideas Into Real-World Solutions. I’ve Interned At CDAC Where I Worked On Crime Analytics And AI Integration, And I Love Creating Projects That Blend Functionality With Creativity.
           </h1>
 
           {/* Horizontal line */}
-          <div className="w-full h-px bg-current mt-12"></div>
+          <div className="w-full h-px bg-current mt-8 sm:mt-12"></div>
         </div>
 
-        {/* SVG Icon */}
-        <div className="flex-shrink-0">
+  {/* SVG Icon (hidden on small screens) */}
+  <div className="hidden md:flex flex-shrink-0">
           <svg
             viewBox="0 0 64 64"
             xmlns="http://www.w3.org/2000/svg"

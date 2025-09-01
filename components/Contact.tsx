@@ -42,21 +42,21 @@ export default function Contact() {
     <>
 
 
-    <div id='contact-section' className='min-h-screen md:h-screen py-8 md:py-0 bg-[#0D0D0D] mb-10 pb-10 text-[#F2F2F2] px-6 pt-20'>
+  <div id='contact-section' className='min-h-screen md:min-h-[90vh] py-8 md:py-10 bg-[#0D0D0D] mb-10 pb-10 text-[#F2F2F2] px-4 sm:px-6 pt-20'>
       
       {/* Header */}
       <div className="flex flex-row justify-center items-center gap-6 mb-12">
         <svg width="50" height="50" className='navbar' viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clipPath="url(#clip0_104_193)"> <path fillRule="evenodd" clipRule="evenodd" d="M116.3 75.4739L149.353 42.4212C151.625 40.1498 155.307 40.1498 157.579 42.4212C159.85 44.6927 159.85 48.3754 157.579 50.6468L124.526 83.6996C131.986 82.0231 140.696 81.0606 150 81.0606C177.614 81.0606 200 89.5401 200 100C200 110.46 177.614 118.939 150 118.939C140.696 118.939 131.986 117.977 124.526 116.3L157.579 149.353C159.85 151.625 159.85 155.307 157.579 157.579C155.307 159.85 151.625 159.85 149.353 157.579L116.3 124.526C117.977 131.986 118.939 140.697 118.939 150C118.939 177.614 110.46 200 100 200C89.5401 200 81.0606 177.614 81.0606 150C81.0606 140.696 82.0231 131.986 83.6996 124.526L50.6468 157.579C48.3754 159.85 44.6927 159.85 42.4213 157.579C40.1499 155.307 40.1499 151.625 42.4213 149.353L75.474 116.3C68.0135 117.977 59.3035 118.939 50 118.939C22.3858 118.939 0 110.46 0 100C0 89.5401 22.3858 81.0606 50 81.0606C59.3035 81.0606 68.0136 82.0231 75.474 83.6996L42.4213 50.6469C40.1499 48.3755 40.1499 44.6928 42.4213 42.4213C44.6927 40.1499 48.3754 40.1499 50.6468 42.4213L83.6996 75.4741C82.0231 68.0136 81.0606 59.3036 81.0606 50C81.0606 22.3858 89.5401 0 100 0C110.46 0 118.939 22.3858 118.939 50C118.939 59.3035 117.977 68.0135 116.3 75.4739Z" fill="url(#paint0_linear_104_193)"/> </g> <defs> <linearGradient id="paint0_linear_104_193" x1="177" y1="-9.23648e-06" x2="39.5" y2="152.5" gradientUnits="userSpaceOnUse"> <stop stopColor="#B0B9FF"/> <stop offset="1" stopColor="#E7E9FF"/> </linearGradient> <clipPath id="clip0_104_193"> <rect width="200" height="200" fill="white"/> </clipPath> </defs> </svg>
-        <h1 className="text-4xl sm:text-6xl md:mt-10 font-bold tracking-wider">CONTACT</h1>
+  <h1 className="text-3xl sm:text-5xl md:text-6xl md:mt-10 font-bold tracking-wider">CONTACT</h1>
         <svg width="50" height="50" className='navbar' viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clipPath="url(#clip0_104_193)"> <path fillRule="evenodd" clipRule="evenodd" d="M116.3 75.4739L149.353 42.4212C151.625 40.1498 155.307 40.1498 157.579 42.4212C159.85 44.6927 159.85 48.3754 157.579 50.6468L124.526 83.6996C131.986 82.0231 140.696 81.0606 150 81.0606C177.614 81.0606 200 89.5401 200 100C200 110.46 177.614 118.939 150 118.939C140.696 118.939 131.986 117.977 124.526 116.3L157.579 149.353C159.85 151.625 159.85 155.307 157.579 157.579C155.307 159.85 151.625 159.85 149.353 157.579L116.3 124.526C117.977 131.986 118.939 140.697 118.939 150C118.939 177.614 110.46 200 100 200C89.5401 200 81.0606 177.614 81.0606 150C81.0606 140.696 82.0231 131.986 83.6996 124.526L50.6468 157.579C48.3754 159.85 44.6927 159.85 42.4213 157.579C40.1499 155.307 40.1499 151.625 42.4213 149.353L75.474 116.3C68.0135 117.977 59.3035 118.939 50 118.939C22.3858 118.939 0 110.46 0 100C0 89.5401 22.3858 81.0606 50 81.0606C59.3035 81.0606 68.0136 82.0231 75.474 83.6996L42.4213 50.6469C40.1499 48.3755 40.1499 44.6928 42.4213 42.4213C44.6927 40.1499 48.3754 40.1499 50.6468 42.4213L83.6996 75.4741C82.0231 68.0136 81.0606 59.3036 81.0606 50C81.0606 22.3858 89.5401 0 100 0C110.46 0 118.939 22.3858 118.939 50C118.939 59.3035 117.977 68.0135 116.3 75.4739Z" fill="url(#paint0_linear_104_193)"/> </g> <defs> <linearGradient id="paint0_linear_104_193" x1="177" y1="-9.23648e-06" x2="39.5" y2="152.5" gradientUnits="userSpaceOnUse"> <stop stopColor="#B0B9FF"/> <stop offset="1" stopColor="#E7E9FF"/> </linearGradient> <clipPath id="clip0_104_193"> <rect width="200" height="200" fill="white"/> </clipPath> </defs> </svg>
 
       </div>
 
       {/* Main layout */}
-      <div className='flex flex-col lg:flex-row lg:justify-between justify-center items-start gap-12 max-w-6xl mx-auto'>
+  <div className='flex flex-col lg:flex-row lg:justify-between justify-center items-start gap-8 md:gap-12 max-w-6xl mx-auto w-full'>
         
         {/* Left: Form */}
-        <div className='bg-[#1a1a1a] flex flex-col gap-6 p-6 sm:p-8 rounded-2xl w-full lg:w-[400px]'>
+  <div className='bg-[#1a1a1a] flex flex-col gap-5 sm:gap-6 p-5 sm:p-7 rounded-2xl w-full lg:w-[420px]'>
           <div className='space-y-1'>
             <label className='text-[#F2F2F2] text-lg font-medium'>Email</label>
             <Input 
@@ -100,7 +100,7 @@ export default function Contact() {
         </div>
 
         {/* Right: Info */}
-        <div className='flex-1 space-y-10 justify-center items-center text-center lg:text-left'>
+        <div className='flex-1 space-y-10 justify-center items-center text-center lg:text-left m-auto'>
           <div>
             <h2
               className="relative text-2xl sm:text-3xl font-light break-words cursor-pointer 
@@ -118,7 +118,7 @@ export default function Contact() {
             <hr className='border-[#F2F2F2] mt-4' />
           </div>
 
-          <div className='bg-[#1a1a1a] rounded-2xl p-6 sm:p-8'>
+          <div className='bg-[#1a1a1a] rounded-2xl p-5 sm:p-7'>
             <h3 className='text-[#F2F2F2] text-lg sm:text-xl font-medium mb-6'>SOCIAL LINKS</h3>
             <div className='flex justify-center lg:justify-start gap-6'>
               <a href="https://www.instagram.com/aditya_the_ace/" target='__blank' className='text-[#F2F2F2] hover:text-gray-400'>

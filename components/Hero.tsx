@@ -82,15 +82,15 @@ export default function Hero() {
     <div id='home' ref={container} className="h-screen w-full text-[#0D0D0D] relative overflow-hidden">
       <Navbar />
       {/* Horizontal lines */}
-      <div className="hor-line hr absolute top-0 left-0 w-full h-[1px] bg-[#0D0D0D] scale-x-0 origin-left" />
-      <div className="hor-line hr absolute left-0 w-full h-[1px] bg-[#0D0D0D] scale-x-0 origin-left" style={{ top: '80%' }} />
-      <div className="hor-line hr absolute bottom-0 left-0 w-full h-[1px] bg-[#0D0D0D] scale-x-0 origin-left" />
+  <div className="hidden md:block hor-line hr absolute top-0 left-0 w-full h-[1px] bg-[#0D0D0D] scale-x-0 origin-left" />
+  <div className="hidden md:block hor-line hr absolute left-0 w-full h-[1px] bg-[#0D0D0D] scale-x-0 origin-left" style={{ top: '80%' }} />
+  <div className="hidden md:block hor-line hr absolute bottom-0 left-0 w-full h-[1px] bg-[#0D0D0D] scale-x-0 origin-left" />
 
       {/* Vertical lines */}
-      <div className="ver-line hr absolute left-0 top-0 h-full w-[1px] bg-[#0D0D0D] scale-y-0 origin-top" />
-      <div className="ver-line hr absolute right-0 top-0 h-full w-[1px] bg-[#0D0D0D] scale-y-0 origin-top" />
-      <div className="ver-line hr absolute top-[80%] bottom-0 w-[1px] bg-[#0D0D0D] scale-y-0 origin-top" style={{ left: '33%' }} />
-      <div className="ver-line hr absolute top-[80%] bottom-0 w-[1px] bg-[#0D0D0D] scale-y-0 origin-top" style={{ left: '66%' }} />
+  <div className="hidden md:block ver-line hr absolute left-0 top-0 h-full w-[1px] bg-[#0D0D0D] scale-y-0 origin-top" />
+  <div className="hidden md:block ver-line hr absolute right-0 top-0 h-full w-[1px] bg-[#0D0D0D] scale-y-0 origin-top" />
+  <div className="hidden md:block ver-line hr absolute top-[80%] bottom-0 w-[1px] bg-[#0D0D0D] scale-y-0 origin-top" style={{ left: '33%' }} />
+  <div className="hidden md:block ver-line hr absolute top-[80%] bottom-0 w-[1px] bg-[#0D0D0D] scale-y-0 origin-top" style={{ left: '66%' }} />
 
       {/* Content */}
       <div className="h-[80%] flex items-center justify-center overflow-hidden">
@@ -116,14 +116,14 @@ export default function Hero() {
         </div>
       </div>
 
-  <div className="h-[20%] flex items-center px-4">
-        <div className="bottom-text shrink-0 basis-[38%] md:basis-[34%] lg:basis-[32%] text-center text-[clamp(1rem,5vh,2rem)] whitespace-nowrap px-3">
+  <div className="md:h-[20%] h-auto flex flex-col md:flex-row items-center px-3 sm:px-4 gap-1.5 md:gap-0 pb-3 md:pb-0">
+  <div className="bottom-text md:shrink-0 md:basis-[34%] lg:basis-[32%] text-center text-sm sm:text-base md:text-[clamp(1rem,5vh,2rem)] leading-snug break-words px-1.5 sm:px-2 md:px-3">
           Full-Stack Developer
         </div>
-        <div className="bottom-text flex-1 min-w-0 text-center text-[clamp(1rem,5vh,2rem)] px-3">
+  <div className="bottom-text flex-1 min-w-0 text-center text-sm sm:text-base md:text-[clamp(1rem,5vh,2rem)] leading-snug break-words px-1.5 sm:px-2 md:px-3">
           AI & Data Science Enthusiast
         </div>
-        <div className="bottom-text flex-1 min-w-0 text-center text-[clamp(1rem,5vh,2rem)] px-3">
+  <div className="bottom-text flex-1 min-w-0 text-center text-sm sm:text-base md:text-[clamp(1rem,5vh,2rem)] leading-snug break-words px-1.5 sm:px-2 md:px-3">
           Ex-SDE Intern at CDAC
         </div>
       </div>

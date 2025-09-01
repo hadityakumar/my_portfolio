@@ -107,23 +107,23 @@ export default function Achievements() {
       </div>
 
       {/* Image + Achievements */}
-      <div className="flex flex-col md:flex-row flex-wrap justify-center items-start gap-10 p-5 w-full max-w-6xl mt-6 md:mt-10">
-        <div className="flex-1 flex justify-center md:justify-start">
+      <div className="flex flex-col md:flex-row flex-wrap justify-center items-start gap-8 md:gap-10 p-4 sm:p-5 w-full max-w-6xl mt-4 md:mt-10">
+        <div className="flex-1 flex justify-center md:justify-start m-auto">
           <Image
             ref={imageRef}
             src="/img.jpeg"
             alt="Abstract network illustration"
-            width={400}
-            height={500}
-            className="rounded-lg shadow-lg border border-white/10"
+            width={380}
+            height={480}
+            className="rounded-lg shadow-lg border border-white/10 w-full max-w-[420px] h-auto"
             onLoad={() => ScrollTrigger.refresh()}
           />
         </div>
 
         <div ref={textRef} className="flex-1">
           {/* Achievements list */}
-          <div className="rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm p-5 md:p-6 shadow-xl">
-            <ul className="space-y-5 md:space-y-6 text-xl md:text-2xl font-semibold leading-tight tracking-wide text-[#F2F2F2]">
+          <div className="rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm p-4 sm:p-5 md:p-6 shadow-xl">
+            <ul className="space-y-4 sm:space-y-5 md:space-y-6 text-lg sm:text-xl md:text-2xl font-semibold leading-tight tracking-wide text-[#F2F2F2]">
               <li className="achievement-item flex items-start gap-4">
                 <span className="mt-2 h-2 w-2 rounded-full bg-gradient-to-r from-[#F2F2F2] to-[#A29E9A] flex-shrink-0" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F2F2F2] to-[#A29E9A]">

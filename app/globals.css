@@ -175,6 +175,14 @@ html.cursor-auto, body.cursor-auto { cursor: auto !important; }
 body.cursor-auto * { cursor: auto !important; }
 body.cursor-auto #cursor { display: none !important; }
 
+/* Lenis: ensure html.lenis covers full page and avoids right-side gaps */
+html, body { width: 100%; }
+html { overflow-x: hidden; }
+html.lenis, html.lenis body { height: auto; width: 100% !important; }
+.lenis.lenis-smooth { scroll-behavior: auto; }
+.lenis.lenis-stopped { overflow: hidden; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+
 /* --- Button Animation Utilities: Login / Signup effects --- */
 @layer components {
   @keyframes spin-slow {

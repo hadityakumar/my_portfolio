@@ -40,7 +40,7 @@ export default function How() {
   return (
     <>
         <div id='how-can-i-help' className='navbar'>
-          <h1 className='lg:text-9xl md:text-7xl navbar sm:text-5xl navbar text-3xl text-[#F2F2F2] how-title font-bold mb-20 text-start'>TIMELINE</h1>
+          <h1 className='text-lg sm:text-2xl md:text-5xl lg:text-7xl text-[#F2F2F2] how-title font-bold mb-12 md:mb-20 text-start'>TIMELINE</h1>
         </div>
         <hr className="w-full border-0 h-[2px] my-0 navbar bg-gradient-to-r from-transparent via-[#F2F2F2] to-transparent" />
     </>

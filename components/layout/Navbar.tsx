@@ -37,11 +37,11 @@ export default function Navbar() {
   return (
   <div className="navbar absolute top-0 left-0 w-full z-50">
       {/* Top Bar */}
-      <div className="flex justify-end z-50 right-2 fixed top-2 p-3 items-center gap-3">
+  <div className="flex justify-end z-50 right-2 fixed top-2 p-2 sm:p-3 items-center gap-2 sm:gap-3">
         {/* Show Resume Button */}
         <button
           onClick={() => setResumeOpen(true)}
-          className="up-effect border border-white rounded-full bg-white text-black px-6 text-sm h-10 min-w-[140px] cursor-pointer"
+          className="up-effect border border-black md:border-white rounded-full bg-white text-black px-4 sm:px-6 text-xs sm:text-sm h-9 sm:h-10 min-w-[80px] sm:min-w-[100px] cursor-pointer shadow-sm"
         >
           <span className="initial-signtext text-black">Resume</span>
           <span className="hover-signtext text-black">Resume</span>
@@ -50,7 +50,7 @@ export default function Navbar() {
         {/* Menu Button */}
         <button
           onClick={() => setOpen(true)}
-          className="w-fit text-nowrap group hover-effect hover:shadow-lg relative overflow-hidden border border-black rounded-full p-2 px-5 text-sm text-black bg-black transition-all duration-500 cursor-pointer"
+          className="w-fit text-nowrap group hover-effect hover:shadow-lg relative overflow-hidden border border-black rounded-full p-2 px-4 sm:px-5 text-xs sm:text-sm text-white bg-black transition-all duration-500 cursor-pointer"
         >
           <span className="relative z-10 transition-all duration-500">
             <span className="initial-text text-white">Menu</span>
