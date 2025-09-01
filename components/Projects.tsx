@@ -216,7 +216,7 @@ export default function Projects() {
     <div ref={pinSectionRef} className="relative">
       {/* WORK text background element (behind rows) */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
-        <h2 className={`text-[20vw] ${shaheenFont.className} md:text-[12vw] text-[#0D0D0D] tracking-wider select-none`}>
+  <h2 className={`text-[10vw] ${shaheenFont.className} md:text-[12vw] text-[#0D0D0D] tracking-wider select-none`}>
           BEST PROJECTS
         </h2>
       </div>
