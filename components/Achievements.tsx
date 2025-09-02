@@ -130,18 +130,21 @@ export default function Achievements() {
                   99 PERCENTILE - JEE MAINS (2021)
                 </span>
               </li>
-              <li className="achievement-item flex items-start gap-4">
-                <span className="mt-2 h-2 w-2 rounded-full bg-gradient-to-r from-[#F2F2F2] to-[#A29E9A] flex-shrink-0" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F2F2F2] to-[#A29E9A]">
-                  9TH RANK  INTER IIT TECH MEET 13.0 (IIT BOMBAY, 2024)
-                </span>
-              </li>
+    
               <li className="achievement-item flex items-start gap-4">
                 <span className="mt-2 h-2 w-2 rounded-full bg-gradient-to-r from-[#F2F2F2] to-[#A29E9A] flex-shrink-0" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F2F2F2] to-[#A29E9A]">
                   1ST PLACE - DATA DETECTIVES CHALLENGE, WISSENAIRE (IIT BHUBANESWAR, 2023)
                 </span>
               </li>
+
+              <li className="achievement-item flex items-start gap-4">
+                <span className="mt-2 h-2 w-2 rounded-full bg-gradient-to-r from-[#F2F2F2] to-[#A29E9A] flex-shrink-0" />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F2F2F2] to-[#A29E9A]">
+                  9TH RANK  INTER IIT TECH MEET 13.0 (IIT BOMBAY, 2024)
+                </span>
+              </li>
+              
               <li className="achievement-item flex items-start gap-4">
                 <span className="mt-2 h-2 w-2 rounded-full bg-gradient-to-r from-[#F2F2F2] to-[#A29E9A] flex-shrink-0" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F2F2F2] to-[#A29E9A]">
