@@ -1,8 +1,15 @@
 'use client'
-import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { Roboto_Flex } from 'next/font/google'
+
+// Font must be initialized at module scope (Next.js requirement)
+const robotoFlexLocal = Roboto_Flex({
+  subsets: ['latin'],
+  weight: ['100','400','500','600','700','800'],
+  display: 'swap'
+})
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger)
@@ -10,88 +17,83 @@ gsap.registerPlugin(ScrollTrigger)
 export default function Achievements() {
   const containerRef = useRef<HTMLDivElement | null>(null)
   const titleRef = useRef<HTMLHeadingElement | null>(null)
-  const imageRef = useRef<HTMLImageElement | null>(null)
-  const textRef = useRef<HTMLDivElement | null>(null)
+
+  const achievements = [
+    '99 PERCENTILE - JEE MAINS (2021)',
+    '1ST PLACE - DATA DETECTIVES CHALLENGE, WISSENAIRE (IIT BHUBANESWAR, 2023)',
+    '5TH RANK  INTER IIT TECH MEET 13.0 (IIT BOMBAY, 2024)',
+    'NATIONAL SEMI-FINALIST - FLIPKART GRID 7.0 (2025)',
+    '1800+ RATED - LEETCODE (COMPETITIVE PROGRAMMING)'
+  ]
 
   useEffect(() => {
+    const chars = '!<>-_\/[]{}=+*^?#________0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+    function scramble(el: HTMLElement, finalText: string, duration = 1.2) {
+      return new Promise<void>((resolve) => {
+        const start = performance.now()
+        const length = finalText.length
+        const revealSteps = Array.from({ length }, (_, i) => i)
+        let frame = 0
+        const total = Math.max(30, Math.floor(duration * 60))
+
+        function update(now: number) {
+          frame++
+            const progress = frame / total
+            const revealCount = Math.floor(progress * length)
+            let out = ''
+            for (let i = 0; i < length; i++) {
+              if (finalText[i] === ' ') { out += ' '; continue }
+              if (i < revealCount) {
+                out += finalText[i]
+              } else {
+                out += chars[Math.floor(Math.random() * chars.length)]
+              }
+            }
+            el.textContent = out
+            if (frame < total) {
+              requestAnimationFrame(update)
+            } else {
+              el.textContent = finalText
+              resolve()
+            }
+        }
+        requestAnimationFrame(update)
+      })
+    }
+
     const ctx = gsap.context(() => {
-      // Initial states
-      gsap.set(titleRef.current, {
-        y: 50,
-        opacity: 0,
-        scale: 0.8
-      })
-
-      gsap.set(imageRef.current, {
-        x: -100,
-        opacity: 0,
-        scale: 0.9,
-        rotation: -5
-      })
-
-      gsap.set(textRef.current, {
-        x: 100,
-        opacity: 0
-      })
-
-      // Ensure list items are hidden initially for a clean staggered reveal
-      const items = gsap.utils.toArray<HTMLElement>('.achievement-item')
-      if (items.length) {
-        gsap.set(items, { opacity: 0, y: 16 })
+      if (titleRef.current) {
+        gsap.from(titleRef.current, {
+          y: 40,
+          opacity: 0,
+          duration: 0.8,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: 'top 75%',
+            once: true
+          }
+        })
       }
 
-      // Section-driven animation timeline (like WebDes)
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: 'top 70%',
-          end: 'bottom 30%',
-          once: true,
-          invalidateOnRefresh: true,
-          refreshPriority: 1,
-        },
-      })
+      // Prepare lines
+      const lines = gsap.utils.toArray<HTMLElement>('.achievement-line')
+      gsap.set(lines, { opacity: 0, y: 18 })
 
-      tl.to(titleRef.current, {
-        y: 0,
-        opacity: 1,
-        scale: 1,
-        duration: 0.9,
-        ease: 'power3.out',
+      ScrollTrigger.create({
+        trigger: containerRef.current,
+        start: 'top 65%',
+        once: true,
+        onEnter: async () => {
+          for (const line of lines) {
+            gsap.to(line, { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' })
+            const finalText = line.dataset.final || line.textContent || ''
+            await scramble(line, finalText, 1.1)
+            await new Promise(r => setTimeout(r, 120))
+          }
+        }
       })
-        .to(
-          imageRef.current,
-          {
-            x: 0,
-            opacity: 1,
-            scale: 1,
-            rotation: 0,
-            duration: 1.0,
-            ease: 'power4.out',
-          },
-          '-=0.3'
-        )
-        .to(
-          textRef.current,
-          {
-            x: 0,
-            opacity: 1,
-            duration: 0.7,
-            ease: 'power3.out',
-          },
-          '-=0.8'
-        )
-        .to(
-          items,
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.6,
-            ease: 'power3.out',
-            stagger: 0.22,
-          },
-          '-=0.5'
-        )
     }, containerRef)
 
     return () => ctx.revert()
@@ -105,60 +107,18 @@ export default function Achievements() {
           Achievements
         </h1>
       </div>
-
-      {/* Image + Achievements */}
-      <div className="flex flex-col md:flex-row flex-wrap justify-center items-start gap-8 md:gap-10 p-4 sm:p-5 w-full max-w-6xl mt-4 md:mt-10">
-        <div className="flex-1 flex justify-center md:justify-start m-auto">
-          <Image
-            ref={imageRef}
-            src="/img.jpeg"
-            alt="Abstract network illustration"
-            width={380}
-            height={480}
-            className="rounded-lg shadow-lg border border-white/10 w-full max-w-[420px] h-auto"
-            onLoad={() => ScrollTrigger.refresh()}
-          />
-        </div>
-
-        <div ref={textRef} className="flex-1">
-          {/* Achievements list */}
-          <div className="rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm p-4 sm:p-5 md:p-6 shadow-xl">
-            <ul className="space-y-4 sm:space-y-5 md:space-y-6 text-lg sm:text-xl md:text-2xl font-semibold leading-tight tracking-wide text-[#F2F2F2]">
-              <li className="achievement-item flex items-start gap-4">
-                <span className="mt-2 h-2 w-2 rounded-full bg-gradient-to-r from-[#F2F2F2] to-[#A29E9A] flex-shrink-0" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F2F2F2] to-[#A29E9A]">
-                  99 PERCENTILE - JEE MAINS (2021)
-                </span>
-              </li>
-    
-              <li className="achievement-item flex items-start gap-4">
-                <span className="mt-2 h-2 w-2 rounded-full bg-gradient-to-r from-[#F2F2F2] to-[#A29E9A] flex-shrink-0" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F2F2F2] to-[#A29E9A]">
-                  1ST PLACE - DATA DETECTIVES CHALLENGE, WISSENAIRE (IIT BHUBANESWAR, 2023)
-                </span>
-              </li>
-
-              <li className="achievement-item flex items-start gap-4">
-                <span className="mt-2 h-2 w-2 rounded-full bg-gradient-to-r from-[#F2F2F2] to-[#A29E9A] flex-shrink-0" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F2F2F2] to-[#A29E9A]">
-                  5TH RANK  INTER IIT TECH MEET 13.0 (IIT BOMBAY, 2024)
-                </span>
-              </li>
-              
-              <li className="achievement-item flex items-start gap-4">
-                <span className="mt-2 h-2 w-2 rounded-full bg-gradient-to-r from-[#F2F2F2] to-[#A29E9A] flex-shrink-0" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F2F2F2] to-[#A29E9A]">
-                  NATIONAL SEMI-FINALIST - FLIPKART GRID 7.0 (2025)
-                </span>
-              </li>
-              <li className="achievement-item flex items-start gap-4">
-                <span className="mt-2 h-2 w-2 rounded-full bg-gradient-to-r from-[#F2F2F2] to-[#A29E9A] flex-shrink-0" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F2F2F2] to-[#A29E9A]">
-                  1800+ RATED - LEETCODE (COMPETITIVE PROGRAMMING)
-                </span>
-              </li>
-            </ul>
-          </div>
+  <div className={`w-full max-w-5xl mt-6 md:mt-10 px-4 sm:px-6 ${robotoFlexLocal.className}`}>
+    <div className="space-y-8 md:space-y-10">
+          {achievements.map((text, i) => (
+            <div
+              key={i}
+              data-final={text}
+      className="achievement-line text-base xs:text-lg sm:text-xl md:text-[2.75rem] font-thin leading-relaxed sm:leading-tight tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-[#F2F2F2] to-[#A29E9A] select-none"
+              aria-label={text}
+            >
+              {text}
+            </div>
+          ))}
         </div>
       </div>
     </div>
