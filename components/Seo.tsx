@@ -52,7 +52,7 @@ useGSAP(() => {
           </div>
           <div className='navbar order-2 md:order-2 md:col-start-2'>
             <h1 className='lg:text-8xl flex flex-row gap-x-4 navbar flex-wrap text-[#F2F2F2] md:text-7xl seo-title sm:text-5xl text-3xl'>
-              INTERNSHIP AT CDAC TRIVANDRUM
+              BUILD FOR BHARAT FELLOWSHIP  (CDAC)
             </h1>
           </div>
         </div>
