@@ -108,7 +108,7 @@ export default function Navbar() {
 
       {/* Resume Modal */}
   <Modal open={resumeOpen} onClose={() => setResumeOpen(false)}>
-        <ResumeViewer fileUrl="/Aug_resume.pdf" />
+        <ResumeViewer fileUrl="/Aug_resume_bfbf.pdf" />
       </Modal>
 
   {/* Removed global smooth scroll; Lenis handles scrolling */}
